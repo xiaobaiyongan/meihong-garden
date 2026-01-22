@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>美紅花園｜寺廟供神花藝創新服務</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <style>
+        :root {
+            --main-pink: #e79ca4;  /* 你指定的顏色 */
+            --soft-pink: #fdf2f3;
+            --gold: #d4b170;       /* 搭配粉色的淡金色 */
+            --dark-text: #4a3a3a;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #fffafb; /* 帶一點粉的極淺底色 */
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        /* --- 導覽列：粉色系毛玻璃 --- */
+        .navbar {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.85) !important;
+            border-bottom: 1px solid rgba(231, 156, 164, 0.2);
+            transition: all 0.3s;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            color: var(--main-pink) !important;
+            font-weight: 900;
+        }
+
+        .nav-link {
+            color: var(--dark-text) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--main-pink) !important;
+        }
+
+        /* --- Hero Section: 強烈視覺對比 --- */
+        .hero-container {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: #fff;
+            margin-bottom: 100px;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 65%;
+            height: 100%;
+            background: url('./img/navbar.jpeg') center/cover no-repeat;
+            clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding-left: 5%;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            color: var(--main-pink);
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            border-left: 3px solid var(--main-pink);
+            padding-left: 20px;
+            color: #776a6a;
+        }
+
+        /* --- 花藝卡片 --- */
+        .flower-card {
+            border: none;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(231, 156, 164, 0.1);
+            transition: all 0.4s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .flower-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(231, 156, 164, 0.25);
+        }
+
+        .card-img-wrapper {
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .flower-card:hover .card-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .card-title {
+            color: var(--main-pink);
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .card-title::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: var(--gold);
+            margin: 10px auto;
+        }
+
+        .btn-temple {
+            background-color: var(--main-pink);
+            color: #fff !important;
+            border-radius: 50px;
+            padding: 10px 30px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-temple:hover {
+            background-color: var(--dark-text);
+            transform: scale(1.05);
+        }
+
+        /* --- 寺廟輪播：粉紅漸層沉浸式 --- */
+        .temple-section {
+            background: linear-gradient(135deg, rgba(231, 156, 164, 0.95), rgba(253, 242, 243, 0.9)), url('./img/slider2.jpg') center/cover fixed;
+            padding: 100px 0;
+            color: #4a3a3a;
+        }
+
+        .owl-dot.active span {
+            background: var(--main-pink) !important;
+        }
+
+        /* --- 研究摘要區塊 --- */
+        .summary-box {
+            background: #fff;
+            padding: 60px;
+            border-top: 5px solid var(--main-pink);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 30px 60px rgba(231, 156, 164, 0.15);
+            border-radius: 15px;
+        }
+
+        footer {
+            background-color: var(--dark-text);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 20px;
+        }
+
+        .social-icons i {
+            color: var(--main-pink);
+            transition: 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-0">
+        <div class="container">
+            <a class="navbar-brand" href="#">美紅花園</a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav">
+                <i class="fas fa-bars text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">供神文化</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">花藝服務</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">關於我們</a></li>
+                    <li class="nav-item ms-lg-4">
+                        <a href="#" class="btn btn-temple shadow-0" style="padding: 8px 25px;">登入 / 註冊</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-container">
+        <div class="hero-content">
+            <span class="text-uppercase fw-bold mb-2 d-block" style="color: var(--main-pink); letter-spacing: 3px;">Innovative Floral Service</span>
+            <h1>線上花藝設計<br>與寺廟文化的融合</h1>
+            <p>透過現代設計語彙，重新詮釋台灣傳統供神儀式，讓每一束花都承載著最虔誠的祝禱。</p>
+        </div>
+        <div class="hero-image"></div>
+    </header>
+
+    <section class="container mb-5 pb-5">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">精選供神花卉</h2>
+            <div style="width: 50px; height: 3px; background: var(--main-pink); margin: 20px auto;"></div>
+        </div>
+
+<section class="container mb-5 pb-5">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">精選供神花卉</h2>
+            <div style="width: 50px; height: 3px; background: var(--main-pink); margin: 20px auto;"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="flower-card">
+                    <div class="card-img-wrapper">
+                        <img src="./img/project/flower6.jpg" alt="蓮花">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">聖潔蓮花</h5>
+                        <p class="text-muted small">象徵智慧與覺悟，供佛首選。</p>
+                        <a href="#" class="btn btn-temple">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="flower-card">
+                    <div class="card-img-wrapper">
+                        <img src="./img/project/flower8.jpg" alt="蘭花">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">高雅蘭花</h5>
+                        <p class="text-muted small">福氣疊加，花期持久且高雅。</p>
+                        <a href="#" class="btn btn-temple">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="flower-card">
+                    <div class="card-img-wrapper">
+                        <img src="./img/project/flower3.jpg" alt="茉莉花">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">清香茉莉</h5>
+                        <p class="text-muted small">清香供養，代表內心的純淨。</p>
+                        <a href="#" class="btn btn-temple">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="flower-card">
+                    <div class="card-img-wrapper">
+                        <img src="./img/project/flower2.jpg" alt="玫瑰">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">莊嚴玫瑰</h5>
+                        <p class="text-muted small">熱情與虔誠，展現最誠摯的敬意。</p>
+                        <a href="#" class="btn btn-temple">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="flower-card">
+                    <div class="card-img-wrapper">
+                        <img src="./img/project/flower1.jpg" alt="菊花">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">長壽菊花</h5>
+                        <p class="text-muted small">象徵長久與吉祥，祈求平安順遂。</p>
+                        <a href="#" class="btn btn-temple">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="flower-card">
+                    <div class="card-img-wrapper">
+                        <img src="./img/project/flower4.jpg" alt="百合">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">百年好合</h5>
+                        <p class="text-muted small">花型大方，香氣撲鼻，事事如意。</p>
+                        <a href="#" class="btn btn-temple">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="flower-card">
+                    <div class="card-img-wrapper">
+                        <img src="./img/project/flower5.jpg" alt="桔梗">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">誠摯桔梗</h5>
+                        <p class="text-muted small">永恆的愛與不變的信念。</p>
+                        <a href="#" class="btn btn-temple">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="flower-card">
+                    <div class="card-img-wrapper">
+                        <img src="./img/project/flower7.jpg" alt="康乃馨">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">溫馨母恩</h5>
+                        <p class="text-muted small">祈求母后、娘娘保佑家人平安。</p>
+                        <a href="#" class="btn btn-temple">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="temple-section">
+        <div class="container">
+            <div class="owl-carousel testimonial-carousel">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <img src="./img/temple/temple3.jpg" class="img-fluid shadow-lg rounded-4" alt="寺廟圖片">
+                    </div>
+                    <div class="col-md-7 ps-md-5">
+                        <h3 class="display-5 fw-bold mb-4">歷史的沉澱</h3>
+                        <p class="fs-5 opacity-80">在古老的寺廟中，花藝不再只是裝飾，它是信徒與神明溝通的橋樑。我們的研究旨在將這份傳統數位化，延續香火的新生命。</p>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <img src="./img/temple/temple5.jpg" class="img-fluid shadow-lg rounded-4" alt="寺廟圖片">
+                    </div>
+                    <div class="col-md-7 ps-md-5">
+                        <h3 class="display-5 fw-bold mb-4">創新的足跡</h3>
+                        <p class="fs-5 opacity-80">透過線上預約與客製化設計，讓現代人在忙碌生活中，依然能以最體面的方式，展現對信仰的崇敬。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="summary-box text-center">
+                    <h2 class="mb-4" style="color: var(--main-pink);">創新服務研究摘要</h2>
+                    <p class="lead text-muted" style="line-height: 1.8;">
+                        本研究探索線上花藝如何轉化傳統宗教儀式。透過數據與美學的結合，我們不只提供花束，更提供一種現代化的信仰體驗。這項技術創新不僅提升了效率，更讓傳統文化在Z世代中得以傳承。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5 text-center text-md-start">
+                <div class="col-md-6">
+                    <h3 class="text-white mb-4">美紅花園</h3>
+                    <p>地址：高雄市橋頭區仕豐路 250 號<br>電話：07-6111398</p>
+                </div>
+                <div class="col-md-6 text-md-end social-icons">
+                    <div class="mb-4">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-line fa-2x"></i></a>
+                    </div>
+                    <p>© 2026 美紅花園 研究小組. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/mdb.umd.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".testimonial-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                smartSpeed: 1000,
+                dots: true,
+                nav: false,
+                animateOut: 'fadeOut'
+            });
+
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $('.navbar').addClass('py-2 shadow-sm');
+                } else {
+                    $('.navbar').removeClass('py-2 shadow-sm');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
