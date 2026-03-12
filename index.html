@@ -425,24 +425,39 @@
         </div>
     </div>
 </section>
-    <footer>
-        <div class="container">
-            <div class="row g-4 mb-5 text-center text-md-start">
-                <div class="col-md-6">
-                    <h3 class="text-white mb-4">美紅花園</h3>
-                    <p>地址：高雄市橋頭區仕豐路 250 號<br>電話：07-6111398</p>
+  <footer itemscope itemtype="https://schema.org/Florist">
+    <div class="container">
+        <div class="row g-4 mb-5 text-center text-md-start">
+            <div class="col-md-6">
+                <h3 class="text-white mb-4" itemprop="name">美紅花園</h3>
+                
+                <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    地址：
+                    <span itemprop="addressLocality">高雄市</span>
+                    <span itemprop="addressRegion">橋頭區</span>
+                    <span itemprop="streetAddress">仕豐路 250 號</span>
+                    <br>
+                    電話：<span itemprop="telephone">07-6111398</span>
+                </p>
+            </div>
+            
+            <div class="col-md-6 text-md-end social-icons">
+                <div class="mb-4">
+                    <a href="https://facebook.com/yourpage" class="me-3" itemprop="sameAs">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                    <a href="https://instagram.com/yourpage" class="me-3" itemprop="sameAs">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://line.me/yourpage" itemprop="sameAs">
+                        <i class="fab fa-line fa-2x"></i>
+                    </a>
                 </div>
-                <div class="col-md-6 text-md-end social-icons">
-                    <div class="mb-4">
-                        <a href="#" class="me-3"><i class="fab fa-facebook-f fa-2x"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="#"><i class="fab fa-line fa-2x"></i></a>
-                    </div>
-                    <p>© 2026 美紅花園 研究小組. All Rights Reserved.</p>
-                </div>
+                <p>© 2026 <span itemprop="legalName">美紅花園 研究小組</span>. All Rights Reserved.</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
