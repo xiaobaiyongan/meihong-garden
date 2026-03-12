@@ -208,180 +208,223 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top shadow-0">
-        <div class="container">
-            <a class="navbar-brand" href="#">美紅花園</a>
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav">
-                <i class="fas fa-bars text-dark"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">供神文化</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">花藝服務</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">關於我們</a></li>
-                    <li class="nav-item ms-lg-4">
-                        <a href="#" class="btn btn-temple shadow-0" style="padding: 8px 25px;">登入 / 註冊</a>
-                    </li>
-                </ul>
-            </div>
+   <nav class="navbar navbar-expand-lg fixed-top shadow-0" itemscope itemtype="https://schema.org/SiteNavigationElement">
+    <div class="container">
+        <a class="navbar-brand" href="#" itemprop="url">
+            <span itemprop="name">美紅花園</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-label="切換導航">
+            <i class="fas fa-bars text-dark"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" itemprop="url">
+                        <span itemprop="name">首頁</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" itemprop="url">
+                        <span itemprop="name">供神文化</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" itemprop="url">
+                        <span itemprop="name">花藝服務</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" itemprop="url">
+                        <span itemprop="name">關於我們</span>
+                    </a>
+                </li>
+                <li class="nav-item ms-lg-4">
+                    <a href="#" class="btn btn-temple shadow-0" style="padding: 8px 25px;" itemprop="url">
+                        <span itemprop="name">登入 / 註冊</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </nav>
-
-    <header class="hero-container">
-        <div class="hero-content">
-            <span class="text-uppercase fw-bold mb-2 d-block" style="color: var(--main-pink); letter-spacing: 3px;">Innovative Floral Service</span>
-            <h1>線上花藝設計<br>與寺廟文化的融合</h1>
-            <p>透過現代設計語彙，重新詮釋台灣傳統供神儀式，讓每一束花都承載著最虔誠的祝禱。</p>
-        </div>
-        <div class="hero-image"></div>
-    </header>
-
-    <section class="container mb-5 pb-5">
-        <div class="text-center mb-5">
-            <h2 class="display-6 fw-bold">精選供神花卉</h2>
-            <div style="width: 50px; height: 3px; background: var(--main-pink); margin: 20px auto;"></div>
-        </div>
+    </div>
+</nav>
 
 
-        <div class="row g-4">
-            <div class="col-md-3">
-                <div class="flower-card">
-                    <div class="card-img-wrapper">
-                        <img src="./img/project/flower6.jpg" alt="蓮花">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">聖潔蓮花</h5>
-                        <p class="text-muted small">象徵智慧與覺悟，供佛首選。</p>
-                        <a href="#" class="btn btn-temple">查看詳情</a>
-                    </div>
+  <header class="hero-container" itemscope itemtype="https://schema.org/LocalBusiness">
+    <div class="hero-content">
+        <span class="text-uppercase fw-bold mb-2 d-block" 
+              style="color: var(--main-pink); letter-spacing: 3px;"
+              itemprop="slogan">
+            Innovative Floral Service
+        </span>
+        <h1 itemprop="name">
+            線上花藝設計<br>與寺廟文化的融合
+        </h1>
+        <p itemprop="description">
+            透過現代設計語彙，重新詮釋台灣傳統供神儀式，讓每一束花都承載著最虔誠的祝禱。
+        </p>
+        <meta itemprop="image" content="你的圖片路徑.jpg">
+    </div>
+    <div class="hero-image" role="img" aria-label="美紅花園花藝與寺廟融合示意圖"></div>
+</header>
+
+<section class="container mb-5 pb-5" itemscope itemtype="https://schema.org/ItemList">
+    <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold" itemprop="name">精選供神花卉</h2>
+        <div style="width: 50px; height: 3px; background: var(--main-pink); margin: 20px auto;"></div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+            <div class="flower-card">
+                <div class="card-img-wrapper">
+                    <img src="./img/project/flower6.jpg" alt="蓮花" itemprop="image">
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="flower-card">
-                    <div class="card-img-wrapper">
-                        <img src="./img/project/flower8.jpg" alt="蘭花">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">高雅蘭花</h5>
-                        <p class="text-muted small">福氣疊加，花期持久且高雅。</p>
-                        <a href="#" class="btn btn-temple">查看詳情</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="flower-card">
-                    <div class="card-img-wrapper">
-                        <img src="./img/project/flower3.jpg" alt="茉莉花">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">清香茉莉</h5>
-                        <p class="text-muted small">清香供養，代表內心的純淨。</p>
-                        <a href="#" class="btn btn-temple">查看詳情</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="flower-card">
-                    <div class="card-img-wrapper">
-                        <img src="./img/project/flower2.jpg" alt="玫瑰">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">莊嚴玫瑰</h5>
-                        <p class="text-muted small">熱情與虔誠，展現最誠摯的敬意。</p>
-                        <a href="#" class="btn btn-temple">查看詳情</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="flower-card">
-                    <div class="card-img-wrapper">
-                        <img src="./img/project/flower1.jpg" alt="菊花">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">長壽菊花</h5>
-                        <p class="text-muted small">象徵長久與吉祥，祈求平安順遂。</p>
-                        <a href="#" class="btn btn-temple">查看詳情</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="flower-card">
-                    <div class="card-img-wrapper">
-                        <img src="./img/project/flower4.jpg" alt="百合">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">百年好合</h5>
-                        <p class="text-muted small">花型大方，香氣撲鼻，事事如意。</p>
-                        <a href="#" class="btn btn-temple">查看詳情</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="flower-card">
-                    <div class="card-img-wrapper">
-                        <img src="./img/project/flower5.jpg" alt="桔梗">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">誠摯桔梗</h5>
-                        <p class="text-muted small">永恆的愛與不變的信念。</p>
-                        <a href="#" class="btn btn-temple">查看詳情</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="flower-card">
-                    <div class="card-img-wrapper">
-                        <img src="./img/project/flower7.jpg" alt="康乃馨">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">溫馨母恩</h5>
-                        <p class="text-muted small">祈求母后、娘娘保佑家人平安。</p>
-                        <a href="#" class="btn btn-temple">查看詳情</a>
-                    </div>
+                <div class="card-body">
+                    <h5 class="card-title" itemprop="name">聖潔蓮花</h5>
+                    <p class="text-muted small" itemprop="description">象徵智慧與覺悟，供佛首選。</p>
+                    <a href="#" class="btn btn-temple" itemprop="url">查看詳情</a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="temple-section">
-        <div class="container">
-            <div class="owl-carousel testimonial-carousel">
-                <div class="row align-items-center">
-                    <div class="col-md-5">
-                        <img src="./img/temple/temple3.jpg" class="img-fluid shadow-lg rounded-4" alt="寺廟圖片">
-                    </div>
-                    <div class="col-md-7 ps-md-5">
-                        <h3 class="display-5 fw-bold mb-4">歷史的沉澱</h3>
-                        <p class="fs-5 opacity-80">在古老的寺廟中，花藝不再只是裝飾，它是信徒與神明溝通的橋樑。我們的研究旨在將這份傳統數位化，延續香火的新生命。</p>
-                    </div>
+        <div class="col-md-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+            <div class="flower-card">
+                <div class="card-img-wrapper">
+                    <img src="./img/project/flower8.jpg" alt="蘭花" itemprop="image">
                 </div>
-                <div class="row align-items-center">
-                    <div class="col-md-5">
-                        <img src="./img/temple/temple5.jpg" class="img-fluid shadow-lg rounded-4" alt="寺廟圖片">
-                    </div>
-                    <div class="col-md-7 ps-md-5">
-                        <h3 class="display-5 fw-bold mb-4">創新的足跡</h3>
-                        <p class="fs-5 opacity-80">透過線上預約與客製化設計，讓現代人在忙碌生活中，依然能以最體面的方式，展現對信仰的崇敬。</p>
-                    </div>
+                <div class="card-body">
+                    <h5 class="card-title" itemprop="name">高雅蘭花</h5>
+                    <p class="text-muted small" itemprop="description">福氣疊加，花期持久且高雅。</p>
+                    <a href="#" class="btn btn-temple" itemprop="url">查看詳情</a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="container mb-5 pb-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="summary-box text-center">
-                    <h2 class="mb-4" style="color: var(--main-pink);">創新服務研究摘要</h2>
-                    <p class="lead text-muted" style="line-height: 1.8;">
-                        本研究探索線上花藝如何轉化傳統宗教儀式。透過數據與美學的結合，我們不只提供花束，更提供一種現代化的信仰體驗。這項技術創新不僅提升了效率，更讓傳統文化在Z世代中得以傳承。
+        <div class="col-md-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+            <div class="flower-card">
+                <div class="card-img-wrapper">
+                    <img src="./img/project/flower3.jpg" alt="茉莉花" itemprop="image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" itemprop="name">清香茉莉</h5>
+                    <p class="text-muted small" itemprop="description">清香供養，代表內心的純淨。</p>
+                    <a href="#" class="btn btn-temple" itemprop="url">查看詳情</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+            <div class="flower-card">
+                <div class="card-img-wrapper">
+                    <img src="./img/project/flower2.jpg" alt="玫瑰" itemprop="image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" itemprop="name">莊嚴玫瑰</h5>
+                    <p class="text-muted small" itemprop="description">熱情與虔誠，展現最誠摯的敬意。</p>
+                    <a href="#" class="btn btn-temple" itemprop="url">查看詳情</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+            <div class="flower-card">
+                <div class="card-img-wrapper">
+                    <img src="./img/project/flower1.jpg" alt="菊花" itemprop="image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" itemprop="name">長壽菊花</h5>
+                    <p class="text-muted small" itemprop="description">象徵長久與吉祥，祈求平安順遂。</p>
+                    <a href="#" class="btn btn-temple" itemprop="url">查看詳情</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+            <div class="flower-card">
+                <div class="card-img-wrapper">
+                    <img src="./img/project/flower4.jpg" alt="百合" itemprop="image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" itemprop="name">百年好合</h5>
+                    <p class="text-muted small" itemprop="description">花型大方，香氣撲鼻，事事如意。</p>
+                    <a href="#" class="btn btn-temple" itemprop="url">查看詳情</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+            <div class="flower-card">
+                <div class="card-img-wrapper">
+                    <img src="./img/project/flower5.jpg" alt="桔梗" itemprop="image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" itemprop="name">誠摯桔梗</h5>
+                    <p class="text-muted small" itemprop="description">永恆的愛與不變的信念。</p>
+                    <a href="#" class="btn btn-temple" itemprop="url">查看詳情</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+            <div class="flower-card">
+                <div class="card-img-wrapper">
+                    <img src="./img/project/flower7.jpg" alt="康乃馨" itemprop="image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" itemprop="name">溫馨母恩</h5>
+                    <p class="text-muted small" itemprop="description">祈求母后、娘娘保佑家人平安。</p>
+                    <a href="#" class="btn btn-temple" itemprop="url">查看詳情</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+   <section class="temple-section">
+    <div class="container">
+        <div class="owl-carousel testimonial-carousel">
+            <div class="row align-items-center" itemscope itemtype="https://schema.org/CreativeWork">
+                <div class="col-md-5">
+                    <img src="./img/temple/temple3.jpg" class="img-fluid shadow-lg rounded-4" alt="寺廟圖片" itemprop="image">
+                </div>
+                <div class="col-md-7 ps-md-5">
+                    <h3 class="display-5 fw-bold mb-4" itemprop="headline">歷史的沉澱</h3>
+                    <p class="fs-5 opacity-80" itemprop="description">
+                        在古老的寺廟中，花藝不再只是裝飾，它是信徒與神明溝通的橋樑。我們的研究旨在將這份傳統數位化，延續香火的新生命。
+                    </p>
+                </div>
+            </div>
+            <div class="row align-items-center" itemscope itemtype="https://schema.org/CreativeWork">
+                <div class="col-md-5">
+                    <img src="./img/temple/temple5.jpg" class="img-fluid shadow-lg rounded-4" alt="寺廟圖片" itemprop="image">
+                </div>
+                <div class="col-md-7 ps-md-5">
+                    <h3 class="display-5 fw-bold mb-4" itemprop="headline">創新的足跡</h3>
+                    <p class="fs-5 opacity-80" itemprop="description">
+                        透過線上預約與客製化設計，讓現代人在忙碌生活中，依然能以最體面的方式，展現對信仰的崇敬。
                     </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<section class="container mb-5 pb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="summary-box text-center" itemscope itemtype="https://schema.org/Article">
+                <h2 class="mb-4" style="color: var(--main-pink);" itemprop="headline">創新服務研究摘要</h2>
+                <p class="lead text-muted" style="line-height: 1.8;" itemprop="articleBody">
+                    本研究探索線上花藝如何轉化傳統宗教儀式。透過數據與美學的結合，我們不只提供花束，更提供一種現代化的信仰體驗。這項技術創新不僅提升了效率，更讓傳統文化在 Z 世代中得以傳承。
+                </p>
+                <div itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="美紅花園">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <footer>
         <div class="container">
             <div class="row g-4 mb-5 text-center text-md-start">
